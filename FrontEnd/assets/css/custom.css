@@ -53,3 +53,23 @@ html {
 .button-cari:hover {
   background: #819830;
 }
+
+.nama-resto {
+  color: #fff;
+  font-size: 32px;
+}
+
+.nama-label {
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.booking-input {
+  width: 300px;
+  border-radius: 5px;
+}
+
+.booking-button {
+  background: #32FE81;
+  border-radius: 5px;
+}
