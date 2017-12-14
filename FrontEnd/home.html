@@ -1,39 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html class="uk-height-1-1">
     <head>
-        <title>Title</title>
+        <title>Home</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="assets/css/uikit.min.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/uikit.min.css" />
         <link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
 
     </head>
-    <body>
+    <body class="uk-height-1-1">
 
-    <p class="logo-container uk-clearfix">
-        <img class="logo-image uk-align-center" src="assets/img/logo.png" alt="Logo">
-    </p>
-
-    <div class="uk-padding-small">
-      <div class="uk-width-1-1 fitur-search">
-        <form class="uk-search fitur-search uk-search-default">
-            <input class="uk-search-input" type="search" placeholder="Search...">
-        </form>
+    <div class="uk-vertical-align" style="height: 50%;">
+      <div class="spash-top-container uk-text-center uk-vertical-align-middle">
+        <img class="splash-img uk-responsive-height uk-responsive-width" src="assets/img/logo.png" alt="Logo">
       </div>
     </div>
 
+    <form action="" method="POST" class="fitur-search uk-form uk-search uk-text-center" data-uk-search>
+        <input class="input-search uk-search-field uk-width-1-1 uk-form-large" type="search" placeholder="">
+        <p class="hint-search uk-text-center uk-text-large">Ketik Keyword Tempat Makan</p>
+        <button class="button-search uk-button uk-button-success" type="submit" name="submit" value="submit" type="button">Cari</button>
+    </form>
 
-    <div class="uk-text-center search-hint">
-      Ketik Keyword Tempat Makan
-    </div>
 
-    <div class="uk-margin uk-text-center">
-      <a class="uk-button uk-button-primary button-cari" href="#">CARI</a>
-    </div>
 
     <!-- For Script -->
     <script src="assets/js/jquery-3.2.1.min.js"></script>
     <script src="assets/js/uikit.min.js"></script>
-    <script src="assets/js/uikit-icons.min.js"></script>
     </body>
 </html>
