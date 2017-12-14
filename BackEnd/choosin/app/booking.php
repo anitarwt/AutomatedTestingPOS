@@ -32,4 +32,15 @@ class booking extends Model
         $query = DB::table('booking')->where($id)->get();
         return $query;
     }
+
+    public static function JoinBooking($id){
+        $query = DB::table('booking')
+        ->join('users', 'users.id_user', '=', 'booking.user_id')
+        ->join('pembayaran','pembayaran.id_booking', '=', 'booking.id_booking')
+        ->select('booking.*', 'users.nama', 'pembayaran.total_bayar')
+        ->where('booking.id_user',$id)
+        ->get();
+        return $query;
+    }
+
 }

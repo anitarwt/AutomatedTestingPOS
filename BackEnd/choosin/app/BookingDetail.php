@@ -32,4 +32,11 @@ class BookingDetail extends Model
         $query = DB::table('booking_detail')->where($kriteria)->get();
         return $query;
     }
+
+    public static function JoinDetailBooking($id){
+        $query = DB::table('booking_detail')
+        ->join('menu_makanan', 'menu_makanan.id_menu', '=', 'booking.id_menu')
+        ->select('booking_detail.*','menu_makanan.nama')
+        ->where('booking_detail.id_booking',$id)
+    }
 }
