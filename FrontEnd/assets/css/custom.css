@@ -133,6 +133,44 @@ html {
   font-size: 1.5rem;
 }
 
+/* ROUTE */
+.route-title {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.gambar-peta {
+  padding-top: 40px;
+  padding-bottom: 25px;
+}
+
+.current-location {
+  background: #fff;
+  font-size: 30px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  border-radius: 7px;
+}
+
+.jarak-kiri {
+  padding-left: 15px;
+}
+
+.vehicle-group {
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+
+.route-button {
+  margin-top: 35px;
+  margin-bottom: 35px;
+  background: #33FD81;
+  border-radius: 7px;
+  padding: 10px 60px;
+  font-size: 1.5rem;
+}
+
+
 
 @media (max-width: 768px) {
 
@@ -169,4 +207,17 @@ html {
     vertical-align: -10%;
   }
 
+  .current-location {
+    font-size: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+}
+
+@media (max-width: 320px) {
+  .current-location {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
