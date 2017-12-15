@@ -55,6 +55,10 @@ html {
   padding-bottom: 15px;
 }
 
+.booking-form {
+  padding-bottom: 40px;
+}
+
 .booking-label {
   color: #fff;
   margin-top: 15px;
@@ -78,6 +82,91 @@ html {
   font-size: 1.5rem;
 }
 
-.booking-form {
-  padding-bottom: 40px;
+.menu-container {
+  margin-top: 40px;
+
+}
+
+.form-bayar {
+  padding-bottom: 30px;
+}
+
+.menu-group {
+  background: #fff;
+}
+
+.column-option {
+  background: #FF500F;
+  padding-left: 0px !important;
+}
+
+.nama-menu {
+  font-size: 70px;
+  padding-bottom: 25px;
+}
+
+.harga-menu {
+  padding-top: 25px;
+  font-size: 60px;
+  color: #33AD1F;
+}
+
+.button-opsi {
+  height: 100%;
+  font-size: 3rem;
+}
+
+.button-opsi-padding {
+  padding: 5px;
+}
+
+.button-incdec {
+  background: transparent;
+  color: #fff;
+}
+
+.bayar-button {
+  margin-top: 55px;
+  background: #FF500F;
+  border-radius: 7px;
+  padding: 10px 28px;
+  font-size: 1.5rem;
+}
+
+
+@media (max-width: 768px) {
+
+  .nama-menu {
+    font-size: 40px;
+    padding-bottom: 15px;
+  }
+
+  .harga-menu {
+    font-size: 30px;
+    padding-top: 15px;
+  }
+
+  .button-opsi {
+    font-size: 2rem;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .nama-menu {
+    font-size: 25px;
+    padding-bottom: 5px;
+  }
+
+  .harga-menu {
+    font-size: 15px;
+    padding-top: 5px;
+  }
+
+  .button-opsi {
+    font-size: 1rem;
+    vertical-align: -10%;
+  }
+
 }
