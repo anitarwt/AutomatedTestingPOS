@@ -16,3 +16,10 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/tempatmakan', 'tempatmakanCtrl@index');
+
+	
+/*Route::group(array('prefix'=>'api'),function(){
+	Route::resource('tempatmakan','tempat_makan',array('except'=>array('create','edit')));
+});*/
