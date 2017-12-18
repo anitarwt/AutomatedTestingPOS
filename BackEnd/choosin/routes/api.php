@@ -17,9 +17,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+//route Tempat Makan
 Route::get('/tempatmakan', 'tempatmakanCtrl@index');
+Route::get('/tempatmakan/editform/{id}','tempatmakanCtrl@editform');
+Route::post('/tempatmakan/edit/{id}','tempatmakanCtrl@editform');
+Route::get('/tempatmakan/delete/{id}','tempatmakanCtrl@DeleteTempatMakan');
+Route::post('/tempatmakan/tambah','tempatmakanCtrl@tambah');
 
-	
-/*Route::group(array('prefix'=>'api'),function(){
-	Route::resource('tempatmakan','tempat_makan',array('except'=>array('create','edit')));
-});*/

@@ -20,7 +20,7 @@ class TempatMakan extends Model
 
     public static function EditTempatMakan($id_tempatmakan,$data){
         $query = DB::table('tempat_makan')
-        ->where('id_tempatmakan', $where)
+        ->where('id_tempatmakan', $id_tempatmakan)
         ->update($data);
     }
 
@@ -31,8 +31,8 @@ class TempatMakan extends Model
     }
 
     
-    public static function CariTempat($kriteria){
-        $query = DB::table('tempat_makan')->where($kriteria)->get();
+    public static function CariTempat($id){
+        $query = DB::table('tempat_makan')->where('id_tempatmakan',$id)->get();
         return $query;
     }
 }
