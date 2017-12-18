@@ -7,13 +7,8 @@ html {
 }
 
 .splash-img {
-  width: 250px;
-  height: 108px;
-}
-
-.splash-top-img {
-  width: 150px;
-  height: 65px;
+    width: 250px;
+    height: 108px;
 }
 
 .fitur-search {
@@ -305,88 +300,6 @@ figcaption.detail-menu-flex {
   line-height: 50%;
 }
 
-/* Halaman Login */
-.login-input {
-	margin-bottom: 20px !important;
-}
-
-.konfirmasi-pelurusan {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-/* Halaman Konfirmasi Pembayaran */
-.konfirmasi-container {
-  margin-top: 40px;
-  padding-bottom: 60px;
-}
-
-.konfirmasi-title {
-	color: #fff;
-	font-size: 40px;
-}
-
-.konfirmasi-pembayaran-title {
-  color: #fff;
-	font-size: 40px;
-}
-
-.konfirmasi-code {
-	color: #FD7F23;
-	font-size: 55px;
-	margin-top: 40px;
-	margin-bottom: 80px;
-}
-
-.konfirmasi-input {
-	margin-bottom: 20px !important;
-}
-
-.konfirmasi-button {
-	background: #FF8400;
-}
-
-/* KODE KONFIRMASI */
-.go-detail a {
-	font-size: 30px;
-	color: #FF6464;
-	text-decoration: underline;
-}
-
-.go-detail {
-	margin-bottom: 100px;
-}
-
-.code-booking-button {
-	background: #00FF00;
-  padding: 20px;
-}
-
-/* PILIH BANK */
-.pilih-bank-code {
-	color: #FD7F23;
-	font-size: 55px;
-}
-
-.pilih-bank-title {
-	color: #fff;
-	font-size: 40px;
-	margin-top: 40px;
-	margin-bottom: 80px;
-}
-
-.nama-rek {
-	color: #fff;
-	font-size: 50px;
-	margin-top: 100px;
-  margin-right: 30px;
-}
-
-.nomor-rek {
-	color: #32FD3D;
-	font-size: 70px;
-  margin-right: 30px;
-}
 
 
 @media (max-width: 768px) {
@@ -477,28 +390,6 @@ figcaption.detail-menu-flex {
     font-size: 25px;
     margin-top: 0px;
     margin-bottom: 0px;
-  }
-
-  .konfirmasi-title {
-  	font-size: 25px;
-  }
-
-  .pilih-bank-code {
-    font-size: 35px;
-  }
-
-  .pilih-bank-title {
-    font-size: 25px;
-  }
-
-  .nama-rek {
-    font-size: 30px;
-    margin-bottom: 0px;
-  }
-
-  .nomor-rek {
-  	font-size: 30px;
-    margin-top: 0px;
   }
 
 }
@@ -607,24 +498,6 @@ figcaption.detail-menu-flex {
     line-height: 70%;
   }
 
-  .konfirmasi-title {
-    font-size: 20px;
-  }
-
-  .konfirmasi-code {
-  	font-size: 30px;
-  }
-
-  .nama-rek {
-    font-size: 25px;
-    margin-bottom: 0px;
-  }
-
-  .nomor-rek {
-    font-size: 25px;
-    margin-top: 0px;
-  }
-
 }
 
 @media (max-width: 320px) {
@@ -668,39 +541,4 @@ figcaption.detail-menu-flex {
     margin-bottom: 0px;
     line-height: 70%;
   }
-
-  .konfirmasi-title {
-    font-size: 16px;
-  }
-
-  .konfirmasi-code {
-    font-size: 25px;
-  }
-
-  .code-booking-button {
-    font-size: 16px;
-  }
-
-  .pilih-bank-code {
-  	font-size: 25px;
-  }
-
-  .pilih-bank-title {
-  	font-size: 20px;
-  	margin-top: 40px;
-  	margin-bottom: 80px;
-  }
-
-  .nama-rek {
-    font-size: 20px;
-    margin-bottom: 0px;
-  }
-
-  .nomor-rek {
-    font-size: 20px;
-    margin-top: 0px;
-  }
-
-
-
 }
