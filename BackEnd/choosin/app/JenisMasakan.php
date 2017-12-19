@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class JenisMasakan extends Model
 {
@@ -28,7 +29,7 @@ class JenisMasakan extends Model
         ->update(['status'=>'0']);
     }
 
-    public static function CariTempat($kriteria){
+    public static function Carijenismasakan($kriteria){
         $query = DB::table('jenis_masakan')->where($kriteria)->get();
         return $query;
     }

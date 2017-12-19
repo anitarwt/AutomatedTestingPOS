@@ -12,12 +12,12 @@ use File;
 class tempatmakanCtrl extends Controller
 {
 
-    public function uniqueFilename($path, $name, $ext) {
-        $output = $name;
-        $basename = basename($name, '.' . $ext);
+    public function uniqueFilename($path, $nama, $extension) {
+        $output = $nama;
+        $basename = basename($nama, '.' . $extension);
         $i = 2;
         while(File::exists($path . '/' . $output)) {
-            $output = $basename . $i . '.' . $ext;
+            $output = $basename . $i . '.' . $extension;
             $i ++;
         }
         return $output;
@@ -28,6 +28,7 @@ class tempatmakanCtrl extends Controller
         $model = TempatMakan::LihatTempatMakan();
         return Response::json($model,200);
     }
+
 
     public function tambah(request $request){
         $nama = Input::get('nama');
@@ -43,7 +44,7 @@ class tempatmakanCtrl extends Controller
         $kontak = Input::get('kontak');
 
         $inputan = array([
-                'nama' => $nama,
+                'nama_tempatmakan' => $nama,
                 'alamat' => $alamat,
                 'foto' => $url,
                 'id_pemilik' => $idpemilik,
@@ -81,7 +82,7 @@ class tempatmakanCtrl extends Controller
         $kontak = Input::get('kontak');
 
         $inputan = array([
-                'nama' => $nama,
+                'nama_tempatmakan' => $nama,
                 'alamat' => $alamat,
                 'foto' => $url,
                 'id_pemilik' => $idpemilik,
@@ -107,4 +108,6 @@ class tempatmakanCtrl extends Controller
         $model = TempatMakan::DeleteTempatMakan($id);
         return Response::json("Succes Delete",201);
     }
+
+    
 }

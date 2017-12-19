@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class BookingDetail extends Model
 {
@@ -37,6 +38,6 @@ class BookingDetail extends Model
         $query = DB::table('booking_detail')
         ->join('menu_makanan', 'menu_makanan.id_menu', '=', 'booking.id_menu')
         ->select('booking_detail.*','menu_makanan.nama')
-        ->where('booking_detail.id_booking',$id)
+        ->where('booking_detail.id_booking',$id);
     }
 }

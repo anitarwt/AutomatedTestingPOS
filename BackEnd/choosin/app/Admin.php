@@ -3,19 +3,21 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Admin extends Model
 {
     //
-    public static function loginadmin($username,$password){
-    $query = $query =  DB::table('admin')
-    ->where(['username' => $username,'password' => $password])
-    ->get();
-    if($query){
-        return $query;
-    }else{
-        return false;
-    }
+    public static function loginadmin($username,$password)
+    {
+        $query = $query =  DB::table('admin')
+        ->where(['username' => $username,'password' => $password])
+        ->get();
+            if($query){
+                return $query;
+            }else{
+                return false;
+            }
     }
 
     public static function tambah_admin($data){

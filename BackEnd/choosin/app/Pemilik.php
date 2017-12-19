@@ -7,6 +7,17 @@ use Illuminate\Support\Facades\DB;
 
 class Pemilik extends Model
 {
+    public static function LoginPemilik($username,$password)
+    {
+        $query = $query =  DB::table('admin')
+        ->where(['username' => $username,'password' => $password])
+        ->get();
+            if($query){
+                return $query;
+            }else{
+                return false;
+            }
+    }
     //
     public static function Lihat_pemilik(){
         $query =  DB::table('pemilik')->get();

@@ -35,4 +35,11 @@ class TempatMakan extends Model
         $query = DB::table('tempat_makan')->where('id_tempatmakan',$id)->get();
         return $query;
     }
+
+    public static function TampilTempatPemilik($id){
+        $query = DB::table('tempat_makan')
+        ->where('id_pemilik',$id)
+        ->get();
+        return $query;
+    }
 }

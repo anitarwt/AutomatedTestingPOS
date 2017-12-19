@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 14, 2017 at 06:05 PM
+-- Generation Time: Dec 19, 2017 at 06:25 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -75,6 +75,7 @@ CREATE TABLE `booking` (
   `tanggal` datetime DEFAULT NULL,
   `atas_nama` varchar(65) DEFAULT NULL,
   `id_tempat_makan` int(15) DEFAULT NULL,
+  `total_bayar` double NOT NULL,
   `status` tinyint(1) DEFAULT NULL,
   `keterangan` text,
   `status_bayar` tinyint(1) DEFAULT NULL,
@@ -85,37 +86,37 @@ CREATE TABLE `booking` (
 -- Dumping data for table `booking`
 --
 
-INSERT INTO `booking` (`id_booking`, `id_user`, `kode`, `tanggal`, `atas_nama`, `id_tempat_makan`, `status`, `keterangan`, `status_bayar`, `metode_bayar`) VALUES
-(1, 11, '3760313873485', '1980-08-22 22:09:58', 'Febi Anggraini', 16, 1, 'voluptatem', 1, 'payment_gateway'),
-(2, 15, '8825190', '2015-12-17 04:22:50', 'Lala Oktaviani S.Kom', 24, 1, 'veniam', 0, 'payment_gateway'),
-(3, 24, '1188190047', '2016-01-06 20:59:41', 'Talia Hamima Agustina', 12, 1, 'quia', 0, 'transfer'),
-(4, 21, '778519610', '1975-10-26 14:50:24', 'Clara Widiastuti', 25, 1, 'est', 0, 'transfer'),
-(5, 23, '2119185624', '1971-09-04 14:28:05', 'Natalia Hasanah', 10, 1, 'quasi', 0, 'payment_gateway'),
-(6, 16, '20173881986438', '2000-03-29 01:21:09', 'Jindra Suryono', 20, 1, 'consequatur', 0, 'payment_gateway'),
-(7, 25, '62587173853908', '1981-07-03 04:56:16', 'Balangga Warsita Sinaga S.Sos', 6, 1, 'molestiae', 0, 'payment_gateway'),
-(8, 6, '03201711007', '2012-07-07 09:34:13', 'Gatra Hutapea', 10, 1, 'nihil', 1, 'transfer'),
-(9, 11, '40286322286', '1981-10-20 18:21:03', 'Utama Tirtayasa Manullang', 3, 1, 'est', 1, 'transfer'),
-(10, 14, '58450915', '1998-01-03 13:35:55', 'Nugraha Heryanto Natsir S.IP', 8, 1, 'voluptatum', 1, 'payment_gateway'),
-(11, 7, '699431199', '1994-08-11 13:18:15', 'Jayadi Kusumo M.Kom.', 16, 1, 'unde', 0, 'payment_gateway'),
-(12, 12, '35692396521', '1974-11-22 13:55:28', 'Harimurti Saiful Firgantoro', 8, 1, 'sint', 1, 'payment_gateway'),
-(13, 17, '20548582254728', '2004-06-18 16:45:11', 'Dina Cinthia Lestari M.M.', 15, 1, 'mollitia', 1, 'transfer'),
-(14, 7, '90158192105156', '2009-09-06 14:40:21', 'Sakura Zaenab Yolanda', 3, 1, 'sit', 1, 'payment_gateway'),
-(15, 13, '77371018568253', '2001-12-06 17:00:18', 'Zahra Permata', 10, 1, 'magni', 1, 'payment_gateway'),
-(16, 17, '6544882890', '1998-12-05 15:02:11', 'Intan Aryani', 22, 1, 'neque', 0, 'transfer'),
-(17, 5, '432598490', '2012-05-29 01:20:04', 'Mulyanto Napitupulu', 10, 1, 'dolor', 0, 'payment_gateway'),
-(18, 25, '272329', '1976-04-27 19:53:29', 'Legawa Kurniawan', 5, 1, 'voluptatem', 0, 'transfer'),
-(19, 22, '749292667551', '2011-10-10 12:17:28', 'Luwes Carub Siregar', 7, 1, 'ut', 1, 'payment_gateway'),
-(20, 21, '31293654993', '1981-04-12 10:38:46', 'Zaenab Nuraini', 7, 1, 'quia', 1, 'payment_gateway'),
-(21, 22, '38951440288', '1971-07-19 23:38:48', 'Prayogo Harjo Anggriawan S.E.', 16, 1, 'laudantium', 1, 'transfer'),
-(22, 22, '733281879436257', '2017-04-09 14:00:10', 'Sarah Sudiati S.Pd', 8, 1, 'distinctio', 1, 'transfer'),
-(23, 13, '0376646866', '2010-03-13 07:32:30', 'Tina Mandasari', 12, 1, 'quos', 0, 'transfer'),
-(24, 24, '793849046599', '2007-04-14 02:09:57', 'Cindy Zulaika S.Pt', 21, 1, 'cupiditate', 1, 'transfer'),
-(25, 15, '990235893', '1994-09-27 07:03:01', 'Putri Yulia Riyanti S.Pt', 5, 1, 'magnam', 0, 'payment_gateway'),
-(26, 13, '35001473804', '1996-02-15 15:21:55', 'Mustika Maulana', 7, 1, 'ipsam', 0, 'transfer'),
-(27, 25, '98723917376387', '1993-06-27 11:18:26', 'Danuja Cahyadi Uwais', 24, 1, 'voluptatibus', 1, 'payment_gateway'),
-(28, 22, '764286030', '1985-07-20 20:16:40', 'Kezia Pratiwi', 21, 1, 'repudiandae', 0, 'payment_gateway'),
-(29, 16, '47036039284194', '1997-12-17 13:25:11', 'Yusuf Jagaraga Hidayanto', 25, 1, 'ducimus', 0, 'payment_gateway'),
-(30, 12, '427068787140', '1997-10-16 16:24:47', 'Indah Pratiwi', 4, 1, 'officia', 0, 'payment_gateway');
+INSERT INTO `booking` (`id_booking`, `id_user`, `kode`, `tanggal`, `atas_nama`, `id_tempat_makan`, `total_bayar`, `status`, `keterangan`, `status_bayar`, `metode_bayar`) VALUES
+(1, 11, '3760313873485', '1980-08-22 22:09:58', 'Febi Anggraini', 16, 0, 1, 'voluptatem', 1, 'payment_gateway'),
+(2, 15, '8825190', '2015-12-17 04:22:50', 'Lala Oktaviani S.Kom', 24, 0, 1, 'veniam', 0, 'payment_gateway'),
+(3, 24, '1188190047', '2016-01-06 20:59:41', 'Talia Hamima Agustina', 12, 0, 1, 'quia', 0, 'transfer'),
+(4, 21, '778519610', '1975-10-26 14:50:24', 'Clara Widiastuti', 25, 0, 1, 'est', 0, 'transfer'),
+(5, 23, '2119185624', '1971-09-04 14:28:05', 'Natalia Hasanah', 10, 0, 1, 'quasi', 0, 'payment_gateway'),
+(6, 16, '20173881986438', '2000-03-29 01:21:09', 'Jindra Suryono', 20, 0, 1, 'consequatur', 0, 'payment_gateway'),
+(7, 25, '62587173853908', '1981-07-03 04:56:16', 'Balangga Warsita Sinaga S.Sos', 6, 0, 1, 'molestiae', 0, 'payment_gateway'),
+(8, 6, '03201711007', '2012-07-07 09:34:13', 'Gatra Hutapea', 10, 0, 1, 'nihil', 1, 'transfer'),
+(9, 11, '40286322286', '1981-10-20 18:21:03', 'Utama Tirtayasa Manullang', 3, 0, 1, 'est', 1, 'transfer'),
+(10, 14, '58450915', '1998-01-03 13:35:55', 'Nugraha Heryanto Natsir S.IP', 8, 0, 1, 'voluptatum', 1, 'payment_gateway'),
+(11, 7, '699431199', '1994-08-11 13:18:15', 'Jayadi Kusumo M.Kom.', 16, 0, 1, 'unde', 0, 'payment_gateway'),
+(12, 12, '35692396521', '1974-11-22 13:55:28', 'Harimurti Saiful Firgantoro', 8, 0, 1, 'sint', 1, 'payment_gateway'),
+(13, 17, '20548582254728', '2004-06-18 16:45:11', 'Dina Cinthia Lestari M.M.', 15, 0, 1, 'mollitia', 1, 'transfer'),
+(14, 7, '90158192105156', '2009-09-06 14:40:21', 'Sakura Zaenab Yolanda', 3, 0, 1, 'sit', 1, 'payment_gateway'),
+(15, 13, '77371018568253', '2001-12-06 17:00:18', 'Zahra Permata', 10, 0, 1, 'magni', 1, 'payment_gateway'),
+(16, 17, '6544882890', '1998-12-05 15:02:11', 'Intan Aryani', 22, 0, 1, 'neque', 0, 'transfer'),
+(17, 5, '432598490', '2012-05-29 01:20:04', 'Mulyanto Napitupulu', 10, 0, 1, 'dolor', 0, 'payment_gateway'),
+(18, 25, '272329', '1976-04-27 19:53:29', 'Legawa Kurniawan', 5, 0, 1, 'voluptatem', 0, 'transfer'),
+(19, 22, '749292667551', '2011-10-10 12:17:28', 'Luwes Carub Siregar', 7, 0, 1, 'ut', 1, 'payment_gateway'),
+(20, 21, '31293654993', '1981-04-12 10:38:46', 'Zaenab Nuraini', 7, 0, 1, 'quia', 1, 'payment_gateway'),
+(21, 22, '38951440288', '1971-07-19 23:38:48', 'Prayogo Harjo Anggriawan S.E.', 16, 0, 1, 'laudantium', 1, 'transfer'),
+(22, 22, '733281879436257', '2017-04-09 14:00:10', 'Sarah Sudiati S.Pd', 8, 0, 1, 'distinctio', 1, 'transfer'),
+(23, 13, '0376646866', '2010-03-13 07:32:30', 'Tina Mandasari', 12, 0, 1, 'quos', 0, 'transfer'),
+(24, 24, '793849046599', '2007-04-14 02:09:57', 'Cindy Zulaika S.Pt', 21, 0, 1, 'cupiditate', 1, 'transfer'),
+(25, 15, '990235893', '1994-09-27 07:03:01', 'Putri Yulia Riyanti S.Pt', 5, 0, 1, 'magnam', 0, 'payment_gateway'),
+(26, 13, '35001473804', '1996-02-15 15:21:55', 'Mustika Maulana', 7, 0, 1, 'ipsam', 0, 'transfer'),
+(27, 25, '98723917376387', '1993-06-27 11:18:26', 'Danuja Cahyadi Uwais', 24, 0, 1, 'voluptatibus', 1, 'payment_gateway'),
+(28, 22, '764286030', '1985-07-20 20:16:40', 'Kezia Pratiwi', 21, 0, 1, 'repudiandae', 0, 'payment_gateway'),
+(29, 16, '47036039284194', '1997-12-17 13:25:11', 'Yusuf Jagaraga Hidayanto', 25, 0, 1, 'ducimus', 0, 'payment_gateway'),
+(30, 12, '427068787140', '1997-10-16 16:24:47', 'Indah Pratiwi', 4, 0, 1, 'officia', 0, 'payment_gateway');
 
 -- --------------------------------------------------------
 
@@ -186,7 +187,7 @@ INSERT INTO `booking_detail` (`id_bookingdetail`, `id_booking`, `id_menu`, `juml
 
 CREATE TABLE `jenis_masakan` (
   `id_jenis_masakan` int(11) NOT NULL,
-  `nama` varchar(50) DEFAULT NULL,
+  `nama_jenis` varchar(50) DEFAULT NULL,
   `status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -194,7 +195,7 @@ CREATE TABLE `jenis_masakan` (
 -- Dumping data for table `jenis_masakan`
 --
 
-INSERT INTO `jenis_masakan` (`id_jenis_masakan`, `nama`, `status`) VALUES
+INSERT INTO `jenis_masakan` (`id_jenis_masakan`, `nama_jenis`, `status`) VALUES
 (1, 'Indonesia', 1),
 (2, 'Asia', 1),
 (3, 'Indonesia', 1),
@@ -215,7 +216,7 @@ INSERT INTO `jenis_masakan` (`id_jenis_masakan`, `nama`, `status`) VALUES
 CREATE TABLE `menu_makanan` (
   `id_menu` int(11) NOT NULL,
   `id_tempatmakan` int(11) NOT NULL,
-  `nama` varchar(30) DEFAULT NULL,
+  `nama_makanan` varchar(30) DEFAULT NULL,
   `harga` decimal(10,0) DEFAULT NULL,
   `foto` varchar(50) DEFAULT NULL,
   `status` tinyint(1) DEFAULT NULL,
@@ -226,7 +227,7 @@ CREATE TABLE `menu_makanan` (
 -- Dumping data for table `menu_makanan`
 --
 
-INSERT INTO `menu_makanan` (`id_menu`, `id_tempatmakan`, `nama`, `harga`, `foto`, `status`, `id_jenis_masakan`) VALUES
+INSERT INTO `menu_makanan` (`id_menu`, `id_tempatmakan`, `nama_makanan`, `harga`, `foto`, `status`, `id_jenis_masakan`) VALUES
 (1, 12, 'Little Bacon Burger', '15499', NULL, 1, 10),
 (2, 21, 'Little Cheeseburger', '59785', NULL, 1, 7),
 (3, 12, 'Pasta', '60338', NULL, 1, 7),
@@ -340,45 +341,6 @@ CREATE TABLE `password_resets` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pembayaran`
---
-
-CREATE TABLE `pembayaran` (
-  `id_pembayaran` int(11) NOT NULL,
-  `id_booking` int(11) DEFAULT NULL,
-  `total_bayar` decimal(10,0) DEFAULT NULL,
-  `status` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `pembayaran`
---
-
-INSERT INTO `pembayaran` (`id_pembayaran`, `id_booking`, `total_bayar`, `status`) VALUES
-(1, 16, '373032', 1),
-(2, 18, '207320', 1),
-(3, 14, '92251', 1),
-(4, 13, '284569', 1),
-(5, 17, '445320', 1),
-(6, 11, '273210', 1),
-(7, 10, '340022', 1),
-(8, 12, '449567', 1),
-(9, 3, '390086', 1),
-(10, 5, '81338', 1),
-(11, 2, '124983', 1),
-(12, 19, '293032', 1),
-(13, 9, '229907', 1),
-(14, 8, '247398', 1),
-(15, 6, '316011', 1),
-(16, 15, '470716', 1),
-(17, 4, '364711', 1),
-(18, 20, '93293', 1),
-(19, 7, '384605', 1),
-(20, 1, '388738', 1);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `pemilik`
 --
 
@@ -423,9 +385,9 @@ INSERT INTO `pemilik` (`id_pemilik`, `nama`, `password`, `status`) VALUES
 
 CREATE TABLE `tempat_makan` (
   `id_tempatmakan` int(11) NOT NULL,
-  `nama` varchar(64) DEFAULT NULL,
+  `nama_tempatmakan` varchar(64) DEFAULT NULL,
   `alamat` text,
-  `foto` varchar(50) DEFAULT NULL,
+  `foto` text,
   `id_pemilik` int(15) DEFAULT NULL,
   `latitude` double DEFAULT NULL,
   `longitude` double NOT NULL,
@@ -437,7 +399,7 @@ CREATE TABLE `tempat_makan` (
 -- Dumping data for table `tempat_makan`
 --
 
-INSERT INTO `tempat_makan` (`id_tempatmakan`, `nama`, `alamat`, `foto`, `id_pemilik`, `latitude`, `longitude`, `kontak`, `status`) VALUES
+INSERT INTO `tempat_makan` (`id_tempatmakan`, `nama_tempatmakan`, `alamat`, `foto`, `id_pemilik`, `latitude`, `longitude`, `kontak`, `status`) VALUES
 (1, 'UD Safitri Yuliarti', 'Jln. Dipatiukur No. 912, Payakumbuh 89573, Lampung', NULL, 20, -7.79799, 110.369313, '0744 6818 0972', 1),
 (3, 'UD Dabukke Tbk', 'Jr. Tubagus Ismail No. 314, Administrasi Jakarta Timur 27095, JaBar', NULL, 13, -7.797981, 110.367674, '0859 914 604', 1),
 (4, 'PD Padmasari Puspasari', 'Kpg. Raden Saleh No. 454, Mataram 55702, SumBar', NULL, 15, -7.797811, 110.367294, '0642 0516 4194', 1),
@@ -471,7 +433,12 @@ INSERT INTO `tempat_makan` (`id_tempatmakan`, `nama`, `alamat`, `foto`, `id_pemi
 (32, 'PD Firmansyah (Persero) Tbk', 'Ds. Bambon No. 546, Bima 15276, Maluku', NULL, 14, -7.797498, 110.362182, '(+62) 784 1961 716', 1),
 (33, 'PD Hidayanto (Persero) Tbk', 'Jr. Krakatau No. 666, Tidore Kepulauan 79997, DIY', NULL, 13, -7.798031, 110.367978, '(+62) 27 2853 6348', 1),
 (34, 'UD Nugroho Januar', 'Psr. Dr. Junjunan No. 463, Kotamobagu 18198, Bali', NULL, 13, -7.797536, 110.368706, '(+62) 363 1946 462', 1),
-(35, 'PT Mahendra Suryono (Persero) Tbk', 'Dk. HOS. Cjokroaminoto (Pasirkaliki) No. 285, Denpasar 50863, KalTim', NULL, 16, -7.797556, 110.364922, '0785 7960 773', 1);
+(35, 'PT Mahendra Suryono (Persero) Tbk', 'Dk. HOS. Cjokroaminoto (Pasirkaliki) No. 285, Denpasar 50863, KalTim', NULL, 16, -7.797556, 110.364922, '0785 7960 773', 1),
+(37, 'Ayam Goreng Mbok merem', 'jl lempongsari 158A sariharjo Ngaglik Sleman', 'eye2.png', 20, 7.79799, 110.368313, '082133654145', 1),
+(38, 'Ayam Goreng Mbok merem', 'jl lempongsari 158A sariharjo Ngaglik Sleman', 'eye22.png', 20, 7.79799, 110.368313, '082133654145', 1),
+(39, 'Ayam Goreng Mbok merem', 'jl lempongsari 158A sariharjo Ngaglik Sleman', 'D:\\Development\\XAMPP\\htdocs\\choosin\\public/uploads/imageseye24.png', 20, 7.79799, 110.368313, '082133654145', 1),
+(40, 'Ayam Goreng Mbok merem', 'jl lempongsari 158A sariharjo Ngaglik Sleman', 'D:\\Development\\XAMPP\\htdocs\\choosin\\public/uploads/images/eye25.png', 20, 7.79799, 110.368313, '082133654145', 1),
+(41, 'warung bu sofan', 'jl lempongsari 158A sariharjo Ngaglik Sleman', 'D:\\Development\\XAMPP\\htdocs\\choosin\\public/uploads/images/20582837_200158513853380_262779495172276224_n2.jpg', 20, 7.79799, 110.368313, '082133654145', 1);
 
 -- --------------------------------------------------------
 
@@ -604,13 +571,6 @@ ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
 
 --
--- Indexes for table `pembayaran`
---
-ALTER TABLE `pembayaran`
-  ADD PRIMARY KEY (`id_pembayaran`),
-  ADD KEY `id_booking` (`id_booking`);
-
---
 -- Indexes for table `pemilik`
 --
 ALTER TABLE `pemilik`
@@ -671,12 +631,6 @@ ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `pembayaran`
---
-ALTER TABLE `pembayaran`
-  MODIFY `id_pembayaran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
-
---
 -- AUTO_INCREMENT for table `pemilik`
 --
 ALTER TABLE `pemilik`
@@ -686,7 +640,7 @@ ALTER TABLE `pemilik`
 -- AUTO_INCREMENT for table `tempat_makan`
 --
 ALTER TABLE `tempat_makan`
-  MODIFY `id_tempatmakan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id_tempatmakan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -718,12 +672,6 @@ ALTER TABLE `booking_detail`
 ALTER TABLE `menu_makanan`
   ADD CONSTRAINT `menu_makanan_ibfk_1` FOREIGN KEY (`id_tempatmakan`) REFERENCES `tempat_makan` (`id_tempatmakan`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `menu_makanan_ibfk_2` FOREIGN KEY (`id_jenis_masakan`) REFERENCES `jenis_masakan` (`id_jenis_masakan`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `pembayaran`
---
-ALTER TABLE `pembayaran`
-  ADD CONSTRAINT `pembayaran_ibfk_1` FOREIGN KEY (`id_booking`) REFERENCES `booking` (`id_booking`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `tempat_makan`
