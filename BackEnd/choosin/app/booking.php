@@ -27,6 +27,7 @@ class booking extends Model
         $query = DB::table('booking')
         ->where('id_booking', $id)
         ->update(['status'=>'0']);
+        return $query;
     }
 
     public static function Caribooking($id){
