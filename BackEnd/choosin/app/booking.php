@@ -13,13 +13,20 @@ class Booking extends Model
         return $query;
     }
 
+    public static function dapat_latest_id($id){
+        $query = DB::table('booking')
+        ->select('id_booking','kode')
+        ->where('id_user',$id)
+        ->latest();
+        return $query;
+    }
     public static function tambah_booking($data){
         $query = DB::table('booking')->insert($data);
     }
 
-    public static function edit_booking($id,$data){
+    public static function edit_booking($kode,$data){
         $query = DB::table('booking')
-        ->where('id_booking', $id)
+        ->where('kode', $kode)
         ->update($data);
     }
 

@@ -46,3 +46,11 @@ Route::post('/jenismkanan/delete/{id}','jenismakananCtrl@delete');
 //Route Pemilik
 Route::get('/pemilik/{id}','pemilikCtrl@tempatpemilik');
 Route::post('/pemilik/login','pemilikCtrl@loginpemilik');
+
+//booking
+Route::get('/booking','bookingCtrl@index');
+Route::get('/booking/lihat/{id}','bookingCtrl@lihatdaftarbooking');
+Route::get('/booking/delete/{id}','bookingCtrl@delete_booking');
+Route::post('/booking/buat','bookingCtrl@buat_booking');
+Route::post('/booking/metodebayar/{kode}','bookingCtrl@metode_pembayaran');
+Route::post('/booking/konfirmasi/{kode}','bookingCtrl@konfirmasi_pembayaran');

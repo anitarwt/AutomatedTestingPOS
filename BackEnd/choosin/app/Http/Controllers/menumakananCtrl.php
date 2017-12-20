@@ -63,7 +63,7 @@ class menumakananCtrl extends Controller
         $harga = Input::get('harga');
         $file = Input::file('foto');
         $destination = public_path() . '/uploads/images/makanan';
-        $name = tempatmakanCtrl::uniqueFilename($destination, $file->getClientOriginalName(), $file->getClientOriginalExtension());
+        $name = menumakananCtrl::uniqueFilename($destination, $file->getClientOriginalName(), $file->getClientOriginalExtension());
         $url =  public_path() . '/uploads/images/makanan/'.$name;
         $file->move($destination, $name); 
         $idjenismasakan = Input::get('id_jenis');
