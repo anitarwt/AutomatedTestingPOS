@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
-class booking extends Model
+class Booking extends Model
 {
     //
     public static function Lihat_booking(){
@@ -19,7 +19,7 @@ class booking extends Model
 
     public static function edit_booking($id,$data){
         $query = DB::table('booking')
-        ->where('id_booking', $where)
+        ->where('id_booking', $id)
         ->update($data);
     }
 
@@ -37,7 +37,7 @@ class booking extends Model
 
     public static function JoinBooking($id){
         $query = DB::table('booking')
-        ->join('users', 'users.id_user', '=', 'booking.user_id')
+        ->join('users', 'users.id_user', '=', 'booking.id_user')
         ->join('pembayaran','pembayaran.id_booking', '=', 'booking.id_booking')
         ->select('booking.*', 'users.nama', 'pembayaran.total_bayar')
         ->where('booking.id_user',$id)
