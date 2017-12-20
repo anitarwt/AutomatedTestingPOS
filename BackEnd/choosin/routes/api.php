@@ -17,6 +17,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+
+////////////////////////////////////////////////////
+// Cara Akses API
+// ketik Localhost:8000/api/routenya
+// Contoh: localhost:8000/api/tempatmakan/
+///////////////////////////////////////////////////
+
 //route Tempat Makan
 Route::get('/tempatmakan', 'tempatmakanCtrl@index');
 Route::get('/tempatmakan/editform/{id}','tempatmakanCtrl@editform');
@@ -26,10 +33,10 @@ Route::post('/tempatmakan/tambah','tempatmakanCtrl@tambah');
 
 //Route Menu Makanan
 Route::get('/menumakan/{id}','menumakananCtrl@index');
-Route::get('/menumakan/lihatsemua','menumakanCtrl@lihatsemuamenu');
-Route::post('/menumakan/tambah','menumakanCtrl@tambah');
-Route::post('/menumakan/edit/{id}','menumakanCtrl@update');
-Route::get('/menumakan/delete/{id}','menumakanCtrl@delete');
+Route::get('/menumakan/lihatsemua','menumakananCtrl@lihatsemuamenu');
+Route::post('/menumakan/tambah','menumakananCtrl@tambah');
+Route::post('/menumakan/edit/{id}','menumakananCtrl@update');
+Route::get('/menumakan/delete/{id}','menumakananCtrl@delete');
 
 //Route Jenis Makanan
 Route::get('/jenismakanan','jenismakananCtrl@index');
