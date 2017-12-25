@@ -40,4 +40,6 @@ class BookingDetail extends Model
         ->select('booking_detail.*','menu_makanan.nama')
         ->where('booking_detail.id_booking',$id);
     }
+
+    
 }

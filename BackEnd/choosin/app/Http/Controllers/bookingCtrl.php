@@ -29,40 +29,44 @@ class bookingCtrl extends Controller
 
     public function index(){
         $model = Booking::Lihat_booking();
-        return json($query,200);
+        return Response::json($model,200);
     }
 
     public function lihatdaftarbooking(request $request,$id){
         $model = Booking::Lihat_daftar_booking($id);
-        return json($model,200);
+        return Response::json($model,200);
     }
 
     public function buat_booking(request $request,$id){
         $atasnama = Input::get('nama');
         $tanggal = Input::get('tanggal');
         $waktu = Input::get('waktu');
-        $datetime = $tanggal .' '.$waktu;
+        $datetime = date('Y-m-d H:i', strtotime("$tanggal $waktu"));
         $idtempatmakan = Input::get('idtempatmakan');
         $catatan = Input::get('catatan');
         $kode = bookingCtrl::generate(12);
         
         $data = array([
             'id_user' => $id,
-            'atas_nama' => $nama,
+            'atas_nama' => $atasnama,
             'kode' => $kode,
-            'tanggal' => $tanggal,
-            'id_tempat_makan' => $tempatmakan,
-            'comments' => $catatan,
+            'tanggal' => $datetime,
+            'id_tempat_makan' => $idtempatmakan,
+            'keterangan' => $catatan,
             'status' => '1',
         ]);
         $model = Booking::tambah_booking($data);
-        $model2 = Booking::dapat_latest_id($id);
-        return json($model2,200);
+        if($model){
+            $model2 = Booking::dapat_latest_id($id);
+            return Response::json($model2,200);
+        }
+        return Response::json("failed",200);
     }
+
 
     public function delete_booking(request $request,$id){
         $model = Booking::Delete_booking($id);
-        return json('sucess',200);
+        return Response::json('sucess',200);
     }
 
     public function metode_pembayaran(request $request,$kode){
@@ -74,6 +78,7 @@ class bookingCtrl extends Controller
             'status_bayar'=>'0'
         ]);
         $model = Booking::edit_booking($kode,$data);
+        return Response::json("sucess",200);
     }
 
     public function konfirmasi_pembayaran(request $request,$kode){
@@ -84,6 +89,7 @@ class bookingCtrl extends Controller
             'tanggal_konfirmasi' => $tanggal,
             'status_bayar'=>'1'
         ]);
+        return Response::json("sucess",200);
     }
     
 

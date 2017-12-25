@@ -51,6 +51,6 @@ Route::post('/pemilik/login','pemilikCtrl@loginpemilik');
 Route::get('/booking','bookingCtrl@index');
 Route::get('/booking/lihat/{id}','bookingCtrl@lihatdaftarbooking');
 Route::get('/booking/delete/{id}','bookingCtrl@delete_booking');
-Route::post('/booking/buat','bookingCtrl@buat_booking');
+Route::post('/booking/buat/{id}','bookingCtrl@buat_booking');
 Route::post('/booking/metodebayar/{kode}','bookingCtrl@metode_pembayaran');
 Route::post('/booking/konfirmasi/{kode}','bookingCtrl@konfirmasi_pembayaran');
