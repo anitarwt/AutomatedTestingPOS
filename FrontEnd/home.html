@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="assets/css/uikit.min.css" />
         <link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
-
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     </head>
-    <body class="uk-height-1-1">
+    <body class="uk-height-1-1" ng-app="search" ng-controller="searchCtrl">
 
     <div class="uk-vertical-align" style="height: 50%;">
       <div class="spash-top-container uk-text-center uk-vertical-align-middle">
@@ -17,11 +17,11 @@
     </div>
 
     <form action="" method="POST" class="fitur-search uk-form uk-search uk-text-center" data-uk-search>
-        <input class="input-search uk-search-field uk-width-1-1 uk-form-large" type="search" placeholder="">
+        <input class="input-search uk-search-field uk-width-1-1 uk-form-large" type="search" placeholder="" ng-model="test">
         <p class="hint-search uk-text-center uk-text-large">Ketik Keyword Tempat Makan</p>
     </form>
 
-    <div class="uk-container-center hasil-cari-container">
+    <div class="uk-container-center hasil-cari-container" ng-repeat="baris in tempatmakan | filter:test" ng-show="test">
         <div class="uk-grid hasil-cari-resto-group">
           <div class="uk-width-medium-2-3 uk-width-small-3-4 uk-container-center uk-text-left hasil-resto-content">
             <div class="uk-grid">
@@ -34,13 +34,20 @@
                     <div class="uk-width-1-1">
                       <div class="uk-grid">
                         <div class="uk-width-3-4">
-                          <h2 class="hasil-cari-nama-resto">West Lake</h2>
+                          <h2 class="hasil-cari-nama-resto">{{baris.nama_tempatmakan}}</h2>
                         </div>
                         <div class="uk-width-1-4 uk-text-center" style="padding-left: 0px;">
-                          <span class="hasil-cari-rating"><i class="uk-icon-star icon-rating"></i> 5</span>
                         </div>
                       </div>
-                      <p class="hasil-cari-alamat">Jl. Palagan Km. 6, Ngaglik</p>
+                      <p class="hasil-cari-alamat">{{baris.alamat}}</p>
+                      <br>
+                      <span class="hasil-cari-rating">
+                          <i class="uk-icon-star icon-rating"></i>
+                          <i class="uk-icon-star icon-rating"></i>
+                          <i class="uk-icon-star icon-rating"></i>
+                          <i class="uk-icon-star icon-rating"></i>
+                          <i class="uk-icon-star icon-rating"></i>
+                      </span> 
                       <!--<p class="hasil-cari-avg-title">Rata-rata Budget</p>
                       <p class="hasil-cari-harga-value">RP 50,000</p>-->
                     </div>
@@ -56,5 +63,6 @@
     <script src="assets/js/jquery-3.2.1.min.js"></script>
     <script src="assets/js/uikit.min.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script src="assets/js/search.js"></script>
     </body>
 </html>
