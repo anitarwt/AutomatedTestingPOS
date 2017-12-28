@@ -2,8 +2,6 @@ html {
   background: #2B363C;
 }
 
-body { display: none; }
-
 .spash-top-container {
   width: 100%;
 }
@@ -259,41 +257,42 @@ figcaption.detail-menu-flex {
 
 .hasil-cari-detail {
   background: #fff;
-  padding-top: 20px;
+  padding-top: 25px;
   padding-right: 25px;
-  padding-bottom: 10px;
+  padding-bottom: 25px;
+}
+
+.hasil-cari-span {
+  display: block;
 }
 
 .hasil-cari-nama-resto {
   font-size: 25px;
-}
-
-.icon-rating {
-  color: #FACA24;
-}
-
-.hasil-cari-rating {
-  font-size: 35px;
-  color: #000;
+  font-weight: bold;
+  line-height: 110%;
+  padding-bottom: 10px;
 }
 
 .hasil-cari-alamat {
   font-size: 15px;
-  margin-top: 5px;
-}
-
-.hasil-cari-avg-title {
-  color: #E84A5F;
-  font-size: 15px;
-  margin-bottom: 0px;
+  padding-bottom: 10px;
 }
 
 .hasil-cari-harga-value {
   color: #64B161;
   font-weight: bold;
-  font-size: 30px;
-  margin-top: 5px;
+  font-size: 25px;
 }
+
+.hasil-cari-avg-title {
+  color: #E84A5F;
+  font-weight: bold;
+}
+
+
+
+
+
 
 .hasil-cari-orb-group {
    margin-top: 150px;
@@ -447,38 +446,33 @@ figcaption.detail-menu-flex {
     padding-left: 80px;
   }
 
+  .hasil-cari-image-grid {
+    margin-left: -18px;
+  }
+
   .hasil-cari-text {
     font-size: 25px;
   }
 
   .hasil-cari-detail {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 25px;
+    padding-bottom: 20px;
   }
 
   .hasil-cari-nama-resto {
     font-size: 20px;
-  }
-
-  .hasil-cari-rating {
-    font-size: 25px;
+    padding-bottom: 5px;
   }
 
   .hasil-cari-alamat {
-    font-size: 10px;
-    margin-top: 0px;
-    margin-bottom: 5px;
-  }
-
-  .hasil-cari-avg-title {
-    margin-top: 0px;
-    font-size: 12px;
+    font-size: 15px;
+    padding-bottom: 5px;
   }
 
   .hasil-cari-harga-value {
-    font-size: 25px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    color: #64B161;
+    font-weight: bold;
+    font-size: 20px;
   }
 
   .konfirmasi-title {
@@ -573,33 +567,34 @@ figcaption.detail-menu-flex {
     padding-left: 45px;
   }
 
+  .hasil-cari-image-grid {
+    margin-left: 0px;
+  }
+
   .hasil-cari-text {
     font-size: 20px;
   }
 
   .hasil-cari-detail {
-    padding-top: 3px;
-    padding-bottom: 3px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 
   .hasil-cari-nama-resto {
     font-size: 15px;
-  }
-
-  .hasil-cari-rating {
-    font-size: 15px;
+    padding-bottom: 5px;
   }
 
   .hasil-cari-alamat {
-    font-size: 10px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    line-height: 70%;
+    font-size: 12px;
+    line-height: 120%;
+    padding-bottom: 10px;
   }
 
-  .hasil-cari-avg-title {
-    margin-top: 0px;
-    font-size: 8px;
+  .hasil-cari-harga-value {
+    color: #64B161;
+    font-weight: bold;
+    font-size: 20px;
   }
 
   .hasil-cari-harga-value {
@@ -640,28 +635,24 @@ figcaption.detail-menu-flex {
   }
 
   .hasil-cari-detail {
-    padding-top: 3px;
-    padding-bottom: 3px;
+    /* padding-top: 3px;
+    padding-bottom: 3px; */
   }
 
   .hasil-cari-nama-resto {
-    font-size: 10px;
-  }
-
-  .hasil-cari-rating {
-    font-size: 10px;
+    /* font-size: 10px; */
   }
 
   .hasil-cari-alamat {
-    font-size: 6px;
+    /* font-size: 6px;
     margin-top: 0px;
     margin-bottom: 0px;
-    line-height: 40%;
+    line-height: 40%; */
   }
 
   .hasil-cari-avg-title {
-    margin-top: 0px;
-    font-size: 7px;
+    /* margin-top: 0px;
+    font-size: 7px; */
   }
 
   .hasil-cari-harga-value {
