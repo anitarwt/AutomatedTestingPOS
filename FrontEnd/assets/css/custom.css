@@ -2,6 +2,8 @@ html {
   background: #2B363C;
 }
 
+body { display: none; }
+
 .spash-top-container {
   width: 100%;
 }
