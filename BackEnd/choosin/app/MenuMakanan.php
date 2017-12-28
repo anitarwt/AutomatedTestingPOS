@@ -47,4 +47,13 @@ class MenuMakanan extends Model
         $query = DB::table('menu_makanan')->where($kriteria)->get();
         return $query;
     }
+
+    public static function JoinMakanan($id){
+        $query = DB::table('menu_makanan')
+        ->join('jenis_masakan', 'menu_makanan.id_jenis_masakan', '=', 'jenis_masakan.id_jenis_masakan')
+        ->select('menu_makanan.*','jenis_masakan.nama_jenis')
+        ->where('menu_makanan.id_menu',$id)
+        ->where('menu_makanan.status','=','1')
+        ->get();
+}
 }

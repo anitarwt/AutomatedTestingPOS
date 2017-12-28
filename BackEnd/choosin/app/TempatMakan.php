@@ -42,4 +42,13 @@ class TempatMakan extends Model
         ->get();
         return $query;
     }
+
+    public static function JoinTempatMakan($id){
+        $query = DB::table('tempat_makan')
+        ->join('pemilik', 'pemilik.id_pemilik', '=', 'tempat_makan.id_pemilik')
+        ->select('tempat_makan.*','id_pemilik.nama')
+        ->where('tempat_makan.id_tempatmakan',$id)
+        ->where('tempat_makan.status','=','1')
+        ->get();
+}
 }

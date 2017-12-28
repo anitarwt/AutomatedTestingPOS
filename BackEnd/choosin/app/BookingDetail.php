@@ -36,10 +36,9 @@ class BookingDetail extends Model
 
     public static function JoinDetailBooking($id){
         $query = DB::table('booking_detail')
-        ->join('menu_makanan', 'menu_makanan.id_menu', '=', 'booking.id_menu')
+        ->join('menu_makanan', 'menu_makanan.id_menu', '=', 'booking_detail.id_menu')
         ->select('booking_detail.*','menu_makanan.nama')
-        ->where('booking_detail.id_booking',$id);
-    }
-
-    
+        ->where('booking_detail.id_booking',$id)
+        ->where('booking_detail.status','=','1')
+        ->get();
 }
