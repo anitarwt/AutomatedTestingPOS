@@ -17,12 +17,20 @@ html {
 }
 
 .fitur-search {
+  padding-left: 65px;
+  padding-right: 65px;
+}
+
+/* TIDAK BERGUNA KAH? */
+.fitur-search-member {
   padding-left: 25px;
   padding-right: 25px;
 }
 
 .input-search {
   border-radius: 7px !important;
+  padding: 40px 30px !important;
+  font-size: 26px !important;
 }
 
 .hint-search {
@@ -389,6 +397,64 @@ figcaption.detail-menu-flex {
   margin-right: 30px;
 }
 
+.navbar-bawah {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #2D5668;
+}
+
+.navbar-bawah-link {
+  color: #fff;
+}
+
+.navbar-bawah-group {
+  padding: 25px 15px;
+}
+
+.navbar-bawah-icon {
+  font-size: 280%;
+  vertical-align: -22%;
+}
+
+.navbar-bawah-subtitle {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+a.navbar-bawah-link:hover {
+  color: #b2b2b2;
+  text-decoration: none;
+}
+
+.navbar-active {
+  background: #D3700B;
+}
+
+.history-title {
+  padding-top: 35px;
+  padding-bottom: 25px;
+}
+
+.table-history {
+  color: #fff;
+  font-size: 18px;
+}
+
+.table-history td {
+  padding: 30px 8px;
+}
+
+a.booking-history-lihat {
+  color: #97D67C;
+}
+
+.profile-nama {
+  font-size: 55px;
+  color: #fff;
+}
+
 
 @media (max-width: 768px) {
 
@@ -495,6 +561,28 @@ figcaption.detail-menu-flex {
   .nomor-rek {
   	font-size: 30px;
     margin-top: 0px;
+  }
+
+  .navbar-bawah-group {
+    padding: 20px 15px;
+  }
+
+  .navbar-bawah-booking-icon {
+    padding-left: 35px !important;
+  }
+
+  .navbar-bawah-booking-subtitle {
+    padding-left: 35px !important;
+  }
+
+  .navbar-bawah-icon {
+    font-size: 200%;
+    vertical-align: -16%;
+  }
+
+  .navbar-bawah-subtitle {
+    font-size: 14px;
+    margin-top: 5px;
   }
 
 }
@@ -620,6 +708,42 @@ figcaption.detail-menu-flex {
   .nomor-rek {
     font-size: 25px;
     margin-top: 0px;
+  }
+
+  .fitur-search {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .navbar-bawah-group {
+    padding: 15px 25px;
+  }
+
+  .navbar-bawah-booking-icon {
+    padding-left: 25px !important;
+  }
+
+  .navbar-bawah-booking-subtitle {
+    padding-left: 15px !important;
+  }
+
+  .navbar-bawah-payment-icon {
+    padding-left: 10px !important;
+  }
+
+  .navbar-bawah-icon {
+    font-size: 150%;
+    vertical-align: -10%;
+  }
+
+  .navbar-bawah-subtitle {
+    font-size: 10px;
+    margin-top: 0px;
+  }
+
+  .input-search {
+    padding: 25px 15px !important;
+    font-size: 15px !important;
   }
 
 }

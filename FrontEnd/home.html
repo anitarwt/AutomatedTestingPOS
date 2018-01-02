@@ -17,8 +17,7 @@
     </div>
 
     <form action="" method="POST" class="fitur-search uk-form uk-search uk-text-center" data-uk-search>
-        <input class="input-search uk-search-field uk-width-1-1 uk-form-large" type="search" placeholder="" ng-model="test">
-        <p class="hint-search uk-text-center uk-text-large">Ketik Keyword Tempat Makan</p>
+        <input class="input-search uk-search-field uk-width-1-1" type="search" placeholder="Ketik Keyword Tempat Makan" ng-model="test">
     </form>
 
     <div class="uk-container-center hasil-cari-container" ng-repeat="baris in tempatmakan | filter:test" ng-show="test">
@@ -47,7 +46,7 @@
                           <i class="uk-icon-star icon-rating"></i>
                           <i class="uk-icon-star icon-rating"></i>
                           <i class="uk-icon-star icon-rating"></i>
-                      </span> 
+                      </span>
                       <!--<p class="hasil-cari-avg-title">Rata-rata Budget</p>
                       <p class="hasil-cari-harga-value">RP 50,000</p>-->
                     </div>
