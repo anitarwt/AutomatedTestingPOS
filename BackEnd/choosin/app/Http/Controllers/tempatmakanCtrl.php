@@ -7,21 +7,13 @@ use App\TempatMakan;
 use Response;
 use Illuminate\Support\Facades\Input;
 use File;
+use Illuminate\Support\Facades\Storage;
 
 
 class tempatmakanCtrl extends Controller
 {
 
-    public function uniqueFilename($path, $nama, $extension) {
-        $output = $nama;
-        $basename = basename($nama, '.' . $extension);
-        $i = 2;
-        while(File::exists($path . '/' . $output)) {
-            $output = $basename . $i . '.' . $extension;
-            $i ++;
-        }
-        return $output;
-    }
+    
 
     //
     public function index(){
@@ -33,11 +25,7 @@ class tempatmakanCtrl extends Controller
     public function tambah(request $request){
         $nama = Input::get('nama');
         $alamat = Input::get('alamat');
-        $file = Input::file('foto');
-        $destination = public_path() . '/uploads/images';
-        $name = tempatmakanCtrl::uniqueFilename($destination, $file->getClientOriginalName(), $file->getClientOriginalExtension());
-        $url =  public_path() . '/uploads/images/'.$name;
-        $file->move($destination, $name); 
+        $url = Storage::putFile('foto', $request->file('tempatmakan'));
         $idpemilik = Input::get('id_pemilik');
         $latitude = Input::get('latitude');
         $longitude = Input::get('lognitude');
@@ -71,11 +59,7 @@ class tempatmakanCtrl extends Controller
     public function edit(Request $request,$id){
         $nama = Input::get('nama');
         $alamat = Input::get('alamat');
-        $file = Input::file('foto');
-        $destination = public_path() . '/uploads/images';
-        $name = tempatmakanCtrl::uniqueFilename($destination, $file->getClientOriginalName(), $file->getClientOriginalExtension());
-        $url =  public_path() . '/uploads/images/'.$name;
-        $file->move($destination, $name); 
+        $url = Storage::putFile('foto', $request->file('tempatmakan'));
         $idpemilik = Input::get('id_pemilik');
         $latitude = Input::get('latitude');
         $longitude = Input::get('lognitude');

@@ -55,5 +55,12 @@ class MenuMakanan extends Model
         ->where('menu_makanan.id_menu',$id)
         ->where('menu_makanan.status','=','1')
         ->get();
-}
+    }
+
+    public static function TampilHarga(){
+        $query = DB::table('menu_makanan')
+        ->select('harga')
+        ->get();
+        return $query;
+    }
 }

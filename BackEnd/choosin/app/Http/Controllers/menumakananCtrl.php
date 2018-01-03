@@ -8,21 +8,10 @@ use App\MenuMakanan;
 use Response;
 use Illuminate\Support\Facades\Input;
 use File;
+use Illuminate\Support\Facades\Storage;
 
 class menumakananCtrl extends Controller
-{
-    
-    //membuat unik file name
-    public function uniqueFilename($path, $nama, $extension) {
-        $output = $nama;
-        $basename = basename($nama, '.' . $extension);
-        $i = 2;
-        while(File::exists($path . '/' . $output)) {
-            $output = $basename . $i . '.' . $extension;
-            $i ++;
-        }
-        return $output;
-    }
+{ 
 
     public function index(request $request,$id){
         $model = MenuMakanan::menumakan($id);
@@ -37,11 +26,7 @@ class menumakananCtrl extends Controller
     public function tambah(request $request){
         $nama = Input::get('nama');
         $harga = Input::get('harga');
-        $file = Input::file('foto');
-        $destination = public_path() . '/uploads/images/makanan';
-        $name = tempatmakanCtrl::uniqueFilename($destination, $file->getClientOriginalName(), $file->getClientOriginalExtension());
-        $url =  public_path() . '/uploads/images/makanan/'.$name;
-        $file->move($destination, $name); 
+        $url = Storage::putFile('foto', $request->file('menumakan')); 
         $idjenismasakan = Input::get('id_jenis');
         $idtempatmakan = Input::get('id_tempat');
      
@@ -61,11 +46,7 @@ class menumakananCtrl extends Controller
     public function update(request $request,$id){
         $nama = Input::get('nama');
         $harga = Input::get('harga');
-        $file = Input::file('foto');
-        $destination = public_path() . '/uploads/images/makanan';
-        $name = menumakananCtrl::uniqueFilename($destination, $file->getClientOriginalName(), $file->getClientOriginalExtension());
-        $url =  public_path() . '/uploads/images/makanan/'.$name;
-        $file->move($destination, $name); 
+        $url = Storage::putFile('foto', $request->file('menumakan')); 
         $idjenismasakan = Input::get('id_jenis');
         $idtempatmakan = Input::get('id_tempat');
      

@@ -42,13 +42,11 @@ class Booking extends Model
         return $query;
     }
 
-    public static function JoinBooking($id){
+    public static function Lihat_daftar_booking($id){
         $query = DB::table('booking')
         ->join('users', 'users.id_user', '=', 'booking.id_user')
-        ->join('pembayaran','pembayaran.id_booking', '=', 'booking.id_booking')
-        ->select('booking.*', 'users.nama', 'pembayaran.total_bayar')
+        ->select('booking.*', 'users.nama')
         ->where('booking.id_user',$id)
-        ->where ('booking.status','=','1')
         ->get();
         return $query;
     }
