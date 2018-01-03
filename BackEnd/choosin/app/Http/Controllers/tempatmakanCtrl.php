@@ -25,7 +25,10 @@ class tempatmakanCtrl extends Controller
     public function tambah(request $request){
         $nama = Input::get('nama');
         $alamat = Input::get('alamat');
-        $url = Storage::putFile('foto', $request->file('tempatmakan'));
+        $file = Input::file('foto');
+        $upload = Storage::putFile('public/tempatmakan',$file);
+        $hasil = explode('/',$upload);
+        $filename = $hasil[2];
         $idpemilik = Input::get('id_pemilik');
         $latitude = Input::get('latitude');
         $longitude = Input::get('lognitude');
@@ -34,7 +37,7 @@ class tempatmakanCtrl extends Controller
         $inputan = array([
                 'nama_tempatmakan' => $nama,
                 'alamat' => $alamat,
-                'foto' => $url,
+                'foto' => $filename,
                 'id_pemilik' => $idpemilik,
                 'latitude' => $latitude,
                 'longitude' => $longitude,
@@ -59,7 +62,10 @@ class tempatmakanCtrl extends Controller
     public function edit(Request $request,$id){
         $nama = Input::get('nama');
         $alamat = Input::get('alamat');
-        $url = Storage::putFile('foto', $request->file('tempatmakan'));
+        $file = Input::file('foto');
+        $upload = Storage::putFile('public/tempatmakan',$file);
+        $hasil = explode('/',$upload);
+        $filename = $hasil[2];
         $idpemilik = Input::get('id_pemilik');
         $latitude = Input::get('latitude');
         $longitude = Input::get('lognitude');
@@ -68,7 +74,7 @@ class tempatmakanCtrl extends Controller
         $inputan = array([
                 'nama_tempatmakan' => $nama,
                 'alamat' => $alamat,
-                'foto' => $url,
+                'foto' => $filename,
                 'id_pemilik' => $idpemilik,
                 'latitude' => $latitude,
                 'longitude' => $longitude,
