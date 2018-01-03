@@ -24,16 +24,21 @@ class menumakananCtrl extends Controller
     }
 
     public function tambah(request $request){
+        
         $nama = Input::get('nama');
         $harga = Input::get('harga');
-        $url = Storage::putFile('foto', $request->file('menumakan')); 
+        $file = Input::file('foto');
+        $upload = Storage::putFile('public/menumakan',$file);
+        $hasil = explode('/',$upload);
+        $filename = $hasil[2];
         $idjenismasakan = Input::get('id_jenis');
         $idtempatmakan = Input::get('id_tempat');
-     
+        
+        
         $data = array([
                 'nama_makanan' => $nama,
                 'harga' => $harga,
-                'foto' => $url,
+                'foto' => $filename,
                 'id_jenis_masakan' => $idjenismasakan,
                 'id_tempatmakan' => $idtempatmakan,
                 'status' => '1'
@@ -46,14 +51,17 @@ class menumakananCtrl extends Controller
     public function update(request $request,$id){
         $nama = Input::get('nama');
         $harga = Input::get('harga');
-        $url = Storage::putFile('foto', $request->file('menumakan')); 
+        $file = Input::file('foto');
+        $upload = Storage::putFile('public/menumakan',$file);
+        $hasil = explode('/',$upload);
+        $filename = $hasil[2];
         $idjenismasakan = Input::get('id_jenis');
         $idtempatmakan = Input::get('id_tempat');
      
         $data = array([
                 'nama_makanan' => $nama,
                 'harga' => $harga,
-                'foto' => $url,
+                'foto' => $filename,
                 'id_jenis_masakan' => $idjenismasakan,
                 'id_tempatmakan' => $idtempatmakan,
                 'status' => '1'
