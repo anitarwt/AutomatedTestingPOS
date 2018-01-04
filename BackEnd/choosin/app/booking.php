@@ -50,5 +50,11 @@ class Booking extends Model
         ->get();
         return $query;
     }
+    public static function status_pembayaran($id){
+        $query = DB::table('booking')
+        ->where('status','=','1')
+        ->get();
+        return $query;
+    }
 
 }
