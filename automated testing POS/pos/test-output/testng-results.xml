@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="19346" started-at="2018-01-16T08:49:26Z" finished-at="2018-01-16T08:49:45Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="19346" started-at="2018-01-16T08:49:26Z" finished-at="2018-01-16T08:49:45Z">
+      <class name="pospack.LoginUntilDeleteBooking">
+        <test-method status="PASS" signature="Login()[pri:0, instance:pospack.LoginUntilDeleteBooking@7f9a81e8]" name="Login" duration-ms="12993" started-at="2018-01-16T15:49:26Z" finished-at="2018-01-16T15:49:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method status="PASS" signature="Logininfo()[pri:0, instance:pospack.LoginUntilDeleteBooking@7f9a81e8]" name="Logininfo" duration-ms="1878" started-at="2018-01-16T15:49:39Z" depends-on-methods="pospack.LoginUntilDeleteBooking.Login" finished-at="2018-01-16T15:49:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Logininfo -->
+        <test-method status="PASS" signature="Dashboard()[pri:0, instance:pospack.LoginUntilDeleteBooking@7f9a81e8]" name="Dashboard" duration-ms="489" started-at="2018-01-16T15:49:41Z" depends-on-methods="pospack.LoginUntilDeleteBooking.Logininfo" finished-at="2018-01-16T15:49:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Dashboard -->
+        <test-method status="PASS" signature="DetailMenginap()[pri:0, instance:pospack.LoginUntilDeleteBooking@7f9a81e8]" name="DetailMenginap" duration-ms="3017" started-at="2018-01-16T15:49:42Z" depends-on-methods="pospack.LoginUntilDeleteBooking.Dashboard" finished-at="2018-01-16T15:49:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DetailMenginap -->
+        <test-method status="PASS" signature="Konfirmasi()[pri:0, instance:pospack.LoginUntilDeleteBooking@7f9a81e8]" name="Konfirmasi" duration-ms="932" started-at="2018-01-16T15:49:45Z" depends-on-methods="pospack.LoginUntilDeleteBooking.DetailMenginap" finished-at="2018-01-16T15:49:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Konfirmasi -->
+      </class> <!-- pospack.LoginUntilDeleteBooking -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

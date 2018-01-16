@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="29191" started-at="2017-12-27T08:45:15Z" finished-at="2017-12-27T08:45:44Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="29191" started-at="2017-12-27T08:45:15Z" finished-at="2017-12-27T08:45:44Z">
+      <class name="LoginUntilConfirm">
+        <test-method status="FAIL" signature="StartApps()[pri:0, instance:LoginUntilConfirm@6a024a67]" name="StartApps" duration-ms="29122" started-at="2017-12-27T15:45:15Z" finished-at="2017-12-27T15:45:44Z">
+          <exception class="org.openqa.selenium.InvalidArgumentException">
+            <message>
+              <![CDATA[Missing 'type' parameter
+Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:07:36.161Z'
+System info: host: 'ANITA-PC', ip: '192.168.1.17', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {XULappId: {ec8030f7-c20a-464f-9b0e-13..., acceptInsecureCerts: true, acceptSslCerts: false, appBuildId: 20160526140250, browserName: Firefox, browserVersion: 47.0, command_id: 1, device: desktop, javascriptEnabled: true, moz:firefoxOptions: {args: [], prefs: {}}, platform: XP, platformName: XP, platformVersion: 6.1, proxy: Proxy(), raisesAccessibilityExceptions: false, rotatable: false, specificationLevel: 0, takesElementScreenshot: true, takesScreenshot: true, version: 47.0}
+Session ID: 0fc03ed7-f9d9-4ae0-9ba6-b06ecada555a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.InvalidArgumentException: Missing 'type' parameter
+Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:07:36.161Z'
+System info: host: 'ANITA-PC', ip: '192.168.1.17', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {XULappId: {ec8030f7-c20a-464f-9b0e-13..., acceptInsecureCerts: true, acceptSslCerts: false, appBuildId: 20160526140250, browserName: Firefox, browserVersion: 47.0, command_id: 1, device: desktop, javascriptEnabled: true, moz:firefoxOptions: {args: [], prefs: {}}, platform: XP, platformName: XP, platformVersion: 6.1, proxy: Proxy(), raisesAccessibilityExceptions: false, rotatable: false, specificationLevel: 0, takesElementScreenshot: true, takesScreenshot: true, version: 47.0}
+Session ID: 0fc03ed7-f9d9-4ae0-9ba6-b06ecada555a
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteTimeouts.implicitlyWait(RemoteWebDriver.java:834)
+	at LoginUntilConfirm.StartApps(LoginUntilConfirm.java:29)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:669)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:877)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1201)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:776)
+	at org.testng.TestRunner.run(TestRunner.java:634)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.InvalidArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StartApps -->
+      </class> <!-- LoginUntilConfirm -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
